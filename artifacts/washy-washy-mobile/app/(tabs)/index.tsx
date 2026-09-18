@@ -1,7 +1,7 @@
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
-import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Alert, Pressable, ScrollView, Share, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { copy, orderHistory, services } from '@/src/data';
 import { useApp } from '@/src/store';
@@ -45,7 +45,7 @@ export default function HomeScreen() {
         <View style={styles.trustLine}><TrustNote>Tracked bags · transparent pricing · local partners</TrustNote></View>
 
         <View style={styles.section}>
-          <SectionTitle title="Your active order" action="View details" onAction={() => router.push('/track')} />
+          <SectionTitle title="Your active order" action="View details" onAction={() => router.push('/details')} />
           <OrderCard order={currentOrder} onTrack={() => router.push('/track')} />
         </View>
 
@@ -65,7 +65,12 @@ export default function HomeScreen() {
           <View style={styles.apartmentCopy}>
             <Text style={styles.apartmentKicker}>COMMUNITY COLLECTION</Text>
             <Text style={styles.apartmentTitle}>{copy.apartment} has a laundry day</Text>
-            <Text style={styles.apartmentBody}>Wednesday · 6–8 PM · 12 residents scheduled</Text>
+            <Text style={styles.apartmentBody}>Wednesday · 6–8 PM</Text>
+            <Text style={styles.apartmentSocial}>12 residents scheduled — join this pickup</Text>
+            <View style={styles.apartmentActions}>
+              <Pressable accessibilityRole="button" onPress={() => Alert.alert('Pickup joined', `You’re now part of ${copy.apartment}’s Wednesday collection.`)}><Text style={styles.apartmentJoin}>Join pickup</Text></Pressable>
+              <Pressable accessibilityRole="button" onPress={() => Share.share({ message: `Join my Washy Washy laundry collection at ${copy.apartment}. Use code HILLSIDE12 for a welcome credit.` })}><Text style={styles.apartmentInvite}>Invite building</Text></Pressable>
+            </View>
           </View>
           <Ionicons name="arrow-forward" size={18} color={colors.light.primary} />
         </View>
@@ -106,6 +111,10 @@ const styles = StyleSheet.create({
   apartmentKicker: { color: colors.light.primary, fontFamily: 'Inter_700Bold', fontSize: 9, letterSpacing: 1 },
   apartmentTitle: { color: colors.light.foreground, fontFamily: 'Inter_700Bold', fontSize: 14, marginTop: 5 },
   apartmentBody: { color: colors.light.mutedForeground, fontFamily: 'Inter_400Regular', fontSize: 11, marginTop: 5 },
+  apartmentSocial: { color: colors.light.primary, fontFamily: 'Inter_600SemiBold', fontSize: 11, marginTop: 5 },
+  apartmentActions: { flexDirection: 'row', gap: 14, marginTop: 9 },
+  apartmentJoin: { color: colors.light.primary, fontFamily: 'Inter_700Bold', fontSize: 11 },
+  apartmentInvite: { color: colors.light.mutedForeground, fontFamily: 'Inter_600SemiBold', fontSize: 11 },
   weeklyCard: { backgroundColor: colors.light.mintSoft, borderRadius: 24, padding: 19, borderWidth: 1, borderColor: colors.light.mintBorder },
   weeklyBadge: { flexDirection: 'row', alignItems: 'center', gap: 6 },
   weeklyBadgeText: { color: colors.light.success, fontFamily: 'Inter_700Bold', fontSize: 10, letterSpacing: 1 },

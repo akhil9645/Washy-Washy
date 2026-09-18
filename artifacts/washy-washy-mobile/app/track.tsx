@@ -41,8 +41,9 @@ export default function TrackScreen() {
           <View style={styles.bagTop}><View style={styles.bagIcon}><MaterialCommunityIcons name="qrcode-scan" size={24} color={colors.light.primary} /></View><View style={styles.bagCopy}><Text style={styles.bagLabel}>LAUNDRY BAG</Text><Text style={styles.bagId}>{order.bagId}</Text></View><Ionicons name="shield-checkmark" size={22} color={colors.light.success} /></View>
           <View style={styles.qr}><View style={styles.qrPattern}><MaterialCommunityIcons name="qrcode" size={75} color={colors.light.foreground} /></View><Text style={styles.qrText}>Your bag is securely tracked through every handoff.</Text></View>
         </View>
-        <TrustNote>Final pricing is always approved by you before charging.</TrustNote>
-        <Button label="Need help?" onPress={() => undefined} variant="secondary" icon="chatbubble-ellipses-outline" />
+        <TrustNote>We never process or charge without your approval.</TrustNote>
+        <Button label="View full order details" onPress={() => router.push('/details')} variant="secondary" icon="document-text-outline" />
+        <Button label="Need help?" onPress={() => router.push('/complaint')} variant="secondary" icon="chatbubble-ellipses-outline" />
       </ScrollView>
     </View>
   );

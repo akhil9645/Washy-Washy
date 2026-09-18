@@ -13,9 +13,11 @@ type BookingDraft = {
 type AppContextValue = {
   activeOrder: Order | null;
   draft: BookingDraft;
+  onboardingComplete: boolean | null;
   setDraft: React.Dispatch<React.SetStateAction<BookingDraft>>;
   confirmBooking: (order: Order) => void;
   clearActiveOrder: () => void;
+  completeOnboarding: () => void;
 };
 
 const defaultDraft: BookingDraft = {
@@ -31,13 +33,18 @@ const AppContext = createContext<AppContextValue | undefined>(undefined);
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [activeOrder, setActiveOrder] = useState<Order | null>(null);
   const [draft, setDraft] = useState<BookingDraft>(defaultDraft);
+  const [onboardingComplete, setOnboardingComplete] = useState<boolean | null>(null);
 
   useEffect(() => {
-    AsyncStorage.getItem('washy-active-order')
-      .then((value) => {
-        if (value) setActiveOrder(JSON.parse(value) as Order);
+    Promise.all([
+      AsyncStorage.getItem('washy-active-order'),
+      AsyncStorage.getItem('washy-onboarding-complete'),
+    ])
+      .then(([orderValue, onboardingValue]) => {
+        if (orderValue) setActiveOrder(JSON.parse(orderValue) as Order);
+        setOnboardingComplete(onboardingValue === 'true');
       })
-      .catch(() => undefined);
+      .catch(() => setOnboardingComplete(false));
   }, []);
 
   const confirmBooking = (order: Order) => {
@@ -50,9 +57,14 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     void AsyncStorage.removeItem('washy-active-order');
   };
 
+  const completeOnboarding = () => {
+    setOnboardingComplete(true);
+    void AsyncStorage.setItem('washy-onboarding-complete', 'true');
+  };
+
   const value = useMemo(
-    () => ({ activeOrder, draft, setDraft, confirmBooking, clearActiveOrder }),
-    [activeOrder, draft],
+    () => ({ activeOrder, draft, onboardingComplete, setDraft, confirmBooking, clearActiveOrder, completeOnboarding }),
+    [activeOrder, draft, onboardingComplete],
   );
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

@@ -23,7 +23,13 @@ const queryClient = new QueryClient();
 function RootLayoutNav() {
   return (
     <Stack screenOptions={{ headerBackTitle: 'Back' }}>
+      <Stack.Screen name="index" options={{ headerShown: false }} />
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen name="booking" options={{ headerShown: false }} />
+      <Stack.Screen name="track" options={{ headerShown: false }} />
+      <Stack.Screen name="details" options={{ headerShown: false }} />
+      <Stack.Screen name="price-approval" options={{ headerShown: false }} />
+      <Stack.Screen name="complaint" options={{ headerShown: false }} />
     </Stack>
   );
 }

@@ -1,0 +1,99 @@
+44. TRUST LAYER — THE CORE DIFFERENTIATOR
+
+Every major competitor in this market (Tumbledry, UClean, Fabrico, The Laundry 
+Basket, Neeravi, JOBOY, etc.) suffers from the same complaint pattern:
+
+- Processing/charging clothes BEFORE customer approval
+- No proof of item condition at pickup, so damage/loss disputes go nowhere
+- Centralized "plant" model with no accountable local owner
+- Customer support that stalls, denies, and bounces the complaint around
+
+Washy Washy's entire product wedge is closing these gaps mechanically, not
+just promising to. Build the following as HARD WORKFLOW RULES, not optional
+UI decoration:
+
+44.1 APPROVAL LOCK
+The Laundry Partner Dashboard must NOT allow "Start Processing" to be pressed
+until order.priceApprovalStatus == "approved" by the customer.
+If a partner tries to start processing on an unapproved order, block the 
+action and show: "Waiting on customer price approval."
+Every approval must be timestamped and stored immutably against the order 
+(approval log), visible to admin and customer in Order Details.
+
+44.2 MANDATORY PHOTO EVIDENCE
+Driver app: "Take photo" at pickup is NOT optional — cannot tap "Confirm 
+Pickup" without at least 1 photo of the bag/items.
+Same rule applies at delivery handoff.
+Customer-facing Order Details screen shows a small "Condition at pickup" 
+thumbnail the customer can tap to view full-size.
+This photo becomes the default evidence attached to any complaint filed 
+against that order — auto-attach it, don't make the customer hunt for it.
+
+44.3 VISIBLE ACCOUNTABILITY CHAIN
+On Order Details (customer-facing, simplified) show:
+"Handled by [Local Partner Name] near you"
+Do NOT show internal ops jargon, but DO show a real named local partner —
+this builds trust that a faceless corporate plant can't.
+Admin's chain-of-custody timeline (per section 29) must be exactly what 
+auto-populates when a complaint is opened, so resolution time is minutes, 
+not days.
+
+44.4 COMPLAINT SLA VISIBILITY
+Complaint screen (customer-facing) must show an expected response time,
+e.g. "We typically respond within 4 hours."
+Admin dashboard's complaint queue must show an SLA countdown per complaint, 
+color-coded, and escalate/flag anything unresolved past SLA — this is 
+Attention Required territory, same pattern as section 28.
+
+
+45. "NO SURPRISE" PRICING UX (STRENGTHEN SECTION 16)
+
+The price-change card (section 16) is not just a UI nicety — it is the 
+product's #1 marketing claim in disguise. Reinforce it visually:
+
+- Give the approval card its own moment: full-screen or prominent modal, 
+  not a small banner, so it can't be missed or accidentally dismissed.
+- Show a one-line reason in plain language ("2 items needed stain 
+  treatment"), never a vague "price adjusted."
+- Add a small trust microcopy line permanently visible during booking and 
+  order tracking: "We never process or charge without your approval."
+- This same line should appear in onboarding/first-launch screens as a 
+  core brand promise, not buried in T&Cs.
+
+
+46. APARTMENT COMMUNITY GROWTH LOOP (STRENGTHEN SECTION 21)
+
+Treat apartment collection as a growth/marketing surface, not just an 
+operational convenience:
+
+- On the apartment collection card, add a light social-proof element:
+  "12 residents scheduled — join this pickup" with a single-tap join CTA.
+- Add a referral micro-flow specifically for apartment residents: 
+  "Invite your building" — generates a shareable link/code tied to that 
+  apartment's collection day, with a small credit reward for both sides.
+- Admin dashboard needs an "Apartments" view: list of onboarded 
+  communities, resident count, next collection day, fill rate — this is 
+  how ops decides which buildings to prioritize for local marketing pushes 
+  (flyers, resident WhatsApp groups, RWA tie-ups).
+
+
+47. TRUST-FIRST ONBOARDING / FIRST-LAUNCH SCREENS
+
+Add a short (2–3 screen, skippable) first-launch sequence before Home, 
+each screen pairing one product mechanic with the trust problem it solves:
+
+Screen 1: "Track every step" — bag QR + timeline preview
+Screen 2: "No surprise charges" — price approval card preview
+Screen 3: "Real local partners near you" — named partner + apartment 
+collection preview
+
+Keep it visual, minimal text, skip button always visible top-right.
+This onboarding IS the marketing pitch — it should look like a premium 
+consumer app's onboarding, not a tutorial.
+
+
+48. LOADER
+
+Use the Washy Washy icon as the loading indicator across all four apps 
+(customer, driver, partner, admin) — consistent brand touchpoint even 
+during wait states. No generic spinners.

@@ -1,7 +1,7 @@
 import { Feather, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import React from 'react';
 import {
-  ActivityIndicator,
+  Image,
   Pressable,
   StyleProp,
   StyleSheet,
@@ -19,6 +19,15 @@ export function BrandMark({ small = false }: { small?: boolean }) {
     <View style={[styles.brandMark, small && styles.brandMarkSmall]}>
       <MaterialCommunityIcons name="water" size={small ? 16 : 20} color={colors.light.primary} />
       <View style={styles.brandFold} />
+    </View>
+  );
+}
+
+export function BrandLoader({ label = 'Getting things ready' }: { label?: string }) {
+  return (
+    <View style={styles.loader}>
+      <Image source={require('../assets/images/icon.png')} style={styles.loaderImage} />
+      <Text style={styles.loaderLabel}>{label}</Text>
     </View>
   );
 }
@@ -87,7 +96,7 @@ export function Button({
         style,
       ]}
     >
-      {loading ? <ActivityIndicator color={isPrimary ? colors.light.primaryForeground : colors.light.primary} /> : null}
+      {loading ? <BrandLoader label="" /> : null}
       {!loading ? <Text style={[styles.buttonText, !isPrimary && styles.buttonTextDark]}>{label}</Text> : null}
       {!loading && icon ? <Ionicons name={icon} size={18} color={isPrimary ? colors.light.primaryForeground : colors.light.primary} /> : null}
     </Pressable>
@@ -309,6 +318,9 @@ const styles = StyleSheet.create({
   emptyTitle: { color: colors.light.foreground, fontFamily: 'Inter_700Bold', fontSize: 18, textAlign: 'center' },
   emptyBody: { color: colors.light.mutedForeground, fontFamily: 'Inter_400Regular', fontSize: 13, textAlign: 'center', lineHeight: 19, marginTop: 7 },
   emptyButton: { marginTop: 18 },
+  loader: { alignItems: 'center', justifyContent: 'center', gap: 7 },
+  loaderImage: { width: 24, height: 24, borderRadius: 8 },
+  loaderLabel: { color: colors.light.mutedForeground, fontFamily: 'Inter_500Medium', fontSize: 12 },
   hero: { borderRadius: 28, minHeight: 236, padding: 22, overflow: 'hidden', flexDirection: 'row', position: 'relative' },
   heroCopy: { flex: 1, zIndex: 1 },
   heroKicker: { color: colors.light.mint, fontFamily: 'Inter_700Bold', fontSize: 10, letterSpacing: 1.2 },

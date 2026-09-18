@@ -73,7 +73,7 @@ export const laundryItems: LaundryItem[] = [
   { id: 'saree', label: 'Saree', icon: 'human-female' },
   { id: 'bedsheet', label: 'Bedsheet', icon: 'bed-outline' },
   { id: 'blanket', label: 'Blanket', icon: 'bed-outline' },
-  { id: 'jacket', label: 'Jacket', icon: 'jacket' },
+  { id: 'jacket', label: 'Jacket', icon: 'bag-personal-outline' },
 ];
 
 export const timeSlots = [
@@ -141,4 +141,12 @@ export const copy = {
   neighborhood: 'Kakkanad',
   apartment: 'Prestige Hillside',
   serviceableAddress: 'Home · Kakkanad',
+  localPartner: 'Suds & Co.',
+};
+
+export const pendingPriceApproval = {
+  estimated: '₹380',
+  final: '₹425',
+  reason: '2 items needed stain treatment',
+  detail: 'We found two pieces that need extra stain treatment for a better finish.',
 };
