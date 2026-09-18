@@ -1,0 +1,1206 @@
+
+
+Washy Washy app MASTER UI/UX PROMPT
+  loader should be washy washy icon
+Hyperlocal Laundry Pickup & Delivery Platform — Kakkanad
+ 
+Design and build a premium, modern, highly user-friendly laundry pickup and delivery platform initially targeting Kakkanad, Kochi, Kerala.
+ 
+This is NOT a generic laundry website.
+ 
+The product is an end-to-end hyperlocal laundry management platform connecting:
+ 
+Customer → Pickup Driver → Laundry Partner → Delivery Driver → Customer
+ 
+The most important product principles are:
+ 
+Simplicity + Trust + Transparency + Convenience + Visibility
+ 
+The UI should make the customer feel:
+ 
+“I know what I ordered, what it costs, where my clothes are, and when I will get them back.”
+ 
+ 
+1. DESIGN STYLE
+ 
+Create a modern Indian consumer-tech product.
+ 
+Visual direction:
+ 
+premium
+ 
+clean
+ 
+minimal
+ 
+trustworthy
+ 
+friendly
+ 
+modern
+ 
+mobile-first
+ 
+highly readable
+ 
+spacious
+ 
+intuitive
+ 
+Avoid:
+ 
+generic template appearance
+ 
+excessive gradients
+ 
+excessive animations
+ 
+crowded dashboards
+ 
+too many cards
+ 
+complicated forms
+ 
+unnecessary illustrations
+ 
+overwhelming navigation
+ 
+Use a consistent design system across:
+ 
+customer app
+ 
+driver app
+ 
+laundry partner dashboard
+ 
+admin dashboard
+ 
+Use responsive design.
+ 
+Primary target:
+ 
+Mobile first.
+ 
+Secondary:
+ 
+Tablet/Desktop.
+ 
+ 
+2. BRAND FEEL
+ 
+The brand should communicate:
+ 
+Fresh Clean Reliable Fast Local Professional
+ 
+Create a simple laundry-related visual identity.
+ 
+Use subtle visual elements such as:
+ 
+clean clothing/fabric imagery
+ 
+minimal line icons
+ 
+soft rounded cards
+ 
+clean status indicators
+ 
+Do not make the UI look childish.
+ 
+It should feel like a serious technology platform.
+ 
+ 
+3. CUSTOMER APP NAVIGATION
+ 
+Use bottom navigation:
+ 
+Home Orders Subscriptions Offers Profile
+ 
+Primary CTA on Home:
+ 
+Schedule Laundry Pickup
+ 
+Make this the most prominent action.
+ 
+ 
+4. CUSTOMER HOME SCREEN
+ 
+Create a beautiful home dashboard.
+ 
+Top:
+ 
+“Good morning 👋”
+ 
+Location:
+ 
+“Kakkanad”
+ 
+Allow changing saved address.
+ 
+Main CTA:
+ 
+Schedule Laundry Pickup
+ 
+Below:
+ 
+Active Order
+ 
+Example:
+ 
+Order #LM10231
+ 
+Pickup: Today · 6:00–8:00 PM
+ 
+Status:
+ 
+Pickup scheduled
+ 
+Button:
+ 
+Track Order
+ 
+Then:
+ 
+Services
+ 
+Display visually:
+ 
+Wash & Fold Wash & Iron Iron Only Dry Cleaning Delicate Care
+ 
+Each service card should show:
+ 
+icon/image
+ 
+short description
+ 
+starting price
+ 
+expected turnaround
+ 
+Then:
+ 
+Your Regular Laundry
+ 
+If user has history:
+ 
+“Repeat your last order”
+ 
+Then:
+ 
+Weekly Laundry
+ 
+Promote subscription naturally.
+ 
+Example:
+ 
+“Never worry about laundry again”
+ 
+CTA:
+ 
+Explore Plans
+ 
+ 
+5. BOOKING EXPERIENCE
+ 
+The booking flow must feel extremely simple.
+ 
+Use a step-based flow.
+ 
+Top progress indicator:
+ 
+Service
+ 
+Items
+ 
+Pickup
+ 
+Review
+ 
+Do NOT create a huge single form.
+ 
+ 
+6. STEP 1 — SERVICE
+ 
+Title:
+ 
+“What do you need cleaned?”
+ 
+Cards:
+ 
+Wash & Fold
+ 
+Everyday clothes
+ 
+From ₹XX/kg
+ 
+Wash & Iron
+ 
+Clean + neatly ironed
+ 
+From ₹XX/kg
+ 
+Iron Only
+ 
+From ₹XX/item
+ 
+Dry Cleaning
+ 
+For premium/delicate clothing
+ 
+From ₹XX/item
+ 
+Delicate Care
+ 
+Special handling
+ 
+From ₹XX/item
+ 
+Allow the admin to configure pricing.
+ 
+Never hard-code pricing in frontend.
+ 
+ 
+7. STEP 2 — ITEMS
+ 
+Title:
+ 
+“What are you sending?”
+ 
+Allow users to add:
+ 
+Shirt T-shirt Jeans Trouser Saree Bedsheet Blanket Jacket Blazer Other
+ 
+Each item:
+ 
+Quantity selector
+ 
+and -
+ 
+Also provide:
+ 
+“I’m not sure”
+ 
+Allow customers to skip exact classification.
+ 
+Explain:
+ 
+“We’ll inspect and confirm the final price after pickup.”
+ 
+This is important for usability.
+ 
+ 
+8. MATERIAL / FABRIC
+ 
+For customers who know the material, optionally allow:
+ 
+Cotton Denim Silk Linen Wool Synthetic Mixed Unknown
+ 
+Do NOT force material selection.
+ 
+For ordinary users:
+ 
+“Not sure? No problem.”
+ 
+ 
+9. SPECIAL INSTRUCTIONS
+ 
+Provide simple selectable chips:
+ 
+Delicate White clothes Dark clothes Stain treatment No starch Separate clothes
+ 
+Also:
+ 
+“Add a note”
+ 
+Keep this optional.
+ 
+ 
+10. PRICE EXPERIENCE
+ 
+This is one of the most important UX areas.
+ 
+Show:
+ 
+Estimated Price
+ 
+₹350–₹400
+ 
+Then clearly explain:
+ 
+“Final price is confirmed after we inspect/weigh your clothes.”
+ 
+Never make estimated pricing look like final pricing.
+ 
+Add a small “How pricing works” expandable section.
+ 
+Example:
+ 
+Estimated laundry ₹350
+ 
+Possible special handling ₹30
+ 
+Estimated total ₹380
+ 
+ 
+11. PICKUP ADDRESS
+ 
+Show saved addresses as cards.
+ 
+Example:
+ 
+🏠 Home
+ 
+Kakkanad
+ 
+Change
+ 
+Allow:
+ 
+Add new address
+ 
+Automatically check whether the address is serviceable.
+ 
+If not:
+ 
+“Sorry, we’re not serving this location yet.”
+ 
+Do not allow checkout for unsupported areas.
+ 
+ 
+12. PICKUP SLOT
+ 
+Create a visually clear time-slot selector.
+ 
+Example:
+ 
+TODAY
+ 
+6–8 PM
+ 
+TOMORROW
+ 
+8–10 AM 10 AM–12 PM 6–8 PM
+ 
+Only show available slots.
+ 
+Unavailable slots should be visually disabled.
+ 
+ 
+13. ORDER REVIEW
+ 
+Show a clean summary.
+ 
+Your Laundry
+ 
+Wash + Iron
+ 
+Items: 4 shirts 2 jeans 1 saree
+ 
+Pickup: Today · 6–8 PM
+ 
+Delivery: Expected tomorrow
+ 
+Address: Home · Kakkanad
+ 
+Estimated Total
+ 
+₹380
+ 
+Small note:
+ 
+“Final amount may change after inspection. We’ll notify you before charging any additional amount.”
+ 
+Primary CTA:
+ 
+Confirm Pickup
+ 
+ 
+14. ORDER TRACKING
+ 
+This is the signature feature.
+ 
+Do NOT show only:
+ 
+“Processing”
+ 
+Instead create a beautiful visual timeline.
+ 
+Example:
+ 
+✓ Pickup scheduled Today · 6:00 PM
+ 
+✓ Clothes picked up 6:42 PM
+ 
+✓ Received by laundry 7:25 PM
+ 
+● Inspection In progress
+ 
+○ Washing
+ 
+○ Ironing
+ 
+○ Quality check
+ 
+○ Packed
+ 
+○ Out for delivery
+ 
+○ Delivered
+ 
+Each step should have:
+ 
+icon
+ 
+timestamp
+ 
+short human-readable description
+ 
+ 
+15. BAG TRACKING
+ 
+Show:
+ 
+Laundry Bag
+ 
+BAG-8F72A9
+ 
+QR code
+ 
+“Your laundry bag is securely tracked.”
+ 
+Optional expandable section:
+ 
+Pickup ✓ Driver collected
+ 
+Laundry ✓ Received by partner
+ 
+Delivery ○ Pending
+ 
+This communicates trust without overwhelming the user.
+ 
+ 
+16. PRICE CHANGE EXPERIENCE
+ 
+If actual price changes:
+ 
+Do NOT silently update the price.
+ 
+Show a dedicated notification/card:
+ 
+Price Updated
+ 
+We inspected your clothes.
+ 
+Estimated: ₹380
+ 
+Final: ₹425
+ 
+Reason:
+ 
+Additional delicate-care items
+ 
+Buttons:
+ 
+Approve ₹425
+ 
+Contact Support
+ 
+If customer rejects:
+ 
+allow cancellation/review according to configured business rules.
+ 
+ 
+17. ORDER DETAILS
+ 
+Create a detailed order screen.
+ 
+Sections:
+ 
+Order information Items Price Pickup Laundry processing Delivery Bag information Support
+ 
+Primary status should always be visible at the top.
+ 
+Example:
+ 
+Your clothes are being cleaned
+ 
+Expected delivery:
+ 
+Tomorrow · 6–9 PM
+ 
+ 
+18. DELIVERY TRACKING
+ 
+When order is out for delivery:
+ 
+Show:
+ 
+Out for Delivery
+ 
+Driver: Assigned
+ 
+Expected arrival: 6:00–7:00 PM
+ 
+If real-time tracking is implemented later, provide map tracking.
+ 
+For MVP, simply show:
+ 
+“Driver is on the way.”
+ 
+ 
+19. DELIVERY CONFIRMATION
+ 
+Use OTP verification.
+ 
+Customer screen:
+ 
+Your delivery is here
+ 
+Share this OTP with the delivery partner:
+ 
+4821
+ 
+Never expose unnecessary driver/customer personal information.
+ 
+After successful delivery:
+ 
+Laundry Delivered 🎉
+ 
+Buttons:
+ 
+Rate your experience
+ 
+View Order
+ 
+ 
+20. SUBSCRIPTIONS
+ 
+Create a dedicated subscription experience.
+ 
+Headline:
+ 
+Make laundry automatic
+ 
+Plans:
+ 
+Weekly
+ 
+₹699/month
+ 
+Pickup every week
+ 
+Family
+ 
+₹1,299/month
+ 
+Higher monthly allowance
+ 
+Premium
+ 
+₹1,799/month
+ 
+Priority processing + premium care
+ 
+Do not hard-code these values.
+ 
+Plans must come from backend configuration.
+ 
+Show:
+ 
+Next pickup Remaining allowance Current billing period Pause subscription Skip pickup Cancel subscription
+ 
+Make subscription management extremely transparent.
+ 
+ 
+21. APARTMENT EXPERIENCE
+ 
+This is a key differentiator.
+ 
+If a customer lives in an apartment community:
+ 
+Show:
+ 
+Community Laundry Day
+ 
+“Your apartment’s next collection is Wednesday.”
+ 
+Example:
+ 
+Apartment: Prestige XXX
+ 
+Collection: Wednesday · 6–8 PM
+ 
+This should encourage grouped pickups.
+ 
+Show:
+ 
+“12 residents are scheduled for this collection.”
+ 
+Do not expose private customer information.
+ 
+ 
+22. ORDER HISTORY
+ 
+Create a clean order list.
+ 
+Example:
+ 
+#LM10231
+ 
+₹425
+ 
+Wash + Iron
+ 
+Delivered
+ 
+Sep 10
+ 
+CTA:
+ 
+Reorder
+ 
+This should allow one-tap repeat orders.
+ 
+ 
+23. SUPPORT / COMPLAINT UX
+ 
+Make support available directly from an order.
+ 
+Button:
+ 
+Need help?
+ 
+Categories:
+ 
+Missing item Damaged item Stain issue Wrong item Late delivery Price issue Payment issue Other
+ 
+Allow:
+ 
+text description
+ 
+photo upload
+ 
+order automatically attached
+ 
+Show complaint status.
+ 
+Example:
+ 
+Complaint #C1022
+ 
+Status: Under review
+ 
+ 
+24. DRIVER APP UI
+ 
+Build a separate responsive driver interface.
+ 
+Home:
+ 
+Today’s Tasks
+ 
+Pickup: 8
+ 
+Delivery: 5
+ 
+Use task cards.
+ 
+Example:
+ 
+Pickup #LM10231
+ 
+Customer: Name
+ 
+Location: Kakkanad
+ 
+Time: 6–8 PM
+ 
+CTA:
+ 
+Navigate
+ 
+After arrival:
+ 
+Start Pickup
+ 
+Then:
+ 
+Scan QR
+ 
+Confirm customer
+ 
+Record condition
+ 
+Take photo if required
+ 
+Confirm pickup
+ 
+ 
+25. DRIVER PICKUP SCREEN
+ 
+Make the process sequential.
+ 
+Step 1
+ 
+Verify customer
+ 
+Step 2
+ 
+Scan bag QR
+ 
+Step 3
+ 
+Record condition
+ 
+Step 4
+ 
+Confirm pickup
+ 
+Do not show unnecessary fields.
+ 
+Large buttons.
+ 
+The driver should be able to complete a pickup quickly.
+ 
+ 
+26. LAUNDRY PARTNER DASHBOARD
+ 
+Desktop/tablet optimized.
+ 
+Main dashboard:
+ 
+New orders Processing Ready Delayed Completed
+ 
+Order card:
+ 
+Order ID Bag ID Service Weight Customer area SLA Status
+ 
+Partner workflow:
+ 
+Received
+ 
+→ Inspection
+ 
+→ Washing
+ 
+→ Drying
+ 
+→ Ironing
+ 
+→ Quality Check
+ 
+→ Packed
+ 
+→ Ready
+ 
+Use clear Kanban/status columns where useful.
+ 
+ 
+27. PARTNER ORDER SCREEN
+ 
+Show:
+ 
+Order ID
+ 
+Bag QR
+ 
+Items
+ 
+Actual weight
+ 
+Special instructions
+ 
+Customer-approved price
+ 
+Processing deadline
+ 
+SLA countdown
+ 
+Condition notes
+ 
+Photos where applicable
+ 
+Buttons:
+ 
+Start processing Complete washing Complete ironing QC passed QC failed Pack order Ready for delivery
+ 
+ 
+28. ADMIN DASHBOARD
+ 
+Admin UI should be operational rather than decorative.
+ 
+Dashboard cards:
+ 
+Orders today Pending pickups Processing Ready for delivery Delayed Complaints Revenue
+ 
+Then:
+ 
+Attention Required
+ 
+Show urgent operational issues first.
+ 
+Examples:
+ 
+⚠ 3 pickups delayed
+ 
+⚠ 2 orders approaching SLA breach
+ 
+⚠ Partner capacity almost full
+ 
+⚠ 1 missing-item complaint
+ 
+ 
+29. ADMIN ORDER DETAILS
+ 
+Admin must see the entire chain of custody.
+ 
+Example:
+ 
+CUSTOMER
+ 
+↓
+ 
+ORDER
+ 
+LM10231
+ 
+↓
+ 
+BAG
+ 
+BAG-8F72A9
+ 
+↓
+ 
+DRIVER
+ 
+Driver #D12
+ 
+↓
+ 
+PARTNER
+ 
+Laundry Partner A
+ 
+↓
+ 
+PROCESSING
+ 
+↓
+ 
+QUALITY CHECK
+ 
+↓
+ 
+DELIVERY DRIVER
+ 
+↓
+ 
+CUSTOMER
+ 
+This should be visually represented as a timeline.
+ 
+ 
+30. PRICING MANAGEMENT UI
+ 
+Admin should be able to configure:
+ 
+Service Garment Material Weight Special handling Zone Partner Express fee Delivery fee Discount
+ 
+Example table:
+ 
+Service
+ 
+Item
+ 
+Material
+ 
+Price
+ 
+Wash + Iron
+ 
+Shirt
+ 
+Cotton
+ 
+₹30
+ 
+Wash + Iron
+ 
+Shirt
+ 
+Silk
+ 
+₹45
+ 
+Wash + Fold
+ 
+Jeans
+ 
+Denim
+ 
+₹40
+ 
+Provide:
+ 
+Add pricing rule Edit Deactivate
+ 
+Never delete pricing history if existing orders depend on it.
+ 
+ 
+31. DESIGN SYSTEM
+ 
+Create reusable components:
+ 
+Button Input Select Chip Card BottomSheet Modal Toast StatusBadge Timeline OrderCard ServiceCard PriceSummary AddressCard TimeSlot EmptyState ErrorState LoadingState ConfirmationDialog
+ 
+Maintain consistent:
+ 
+spacing typography border radius shadows icons buttons colors
+ 
+ 
+32. RESPONSIVE DESIGN
+ 
+Customer:
+ 
+Mobile-first.
+ 
+Driver:
+ 
+Mobile-first.
+ 
+Partner:
+ 
+Tablet/Desktop optimized.
+ 
+Admin:
+ 
+Desktop-first but responsive.
+ 
+Do not simply stretch mobile UI onto desktop.
+ 
+Adapt layouts intelligently.
+ 
+ 
+33. EMPTY STATES
+ 
+Never show blank screens.
+ 
+Example:
+ 
+No orders:
+ 
+“You haven’t booked a laundry pickup yet.”
+ 
+CTA:
+ 
+Schedule your first pickup
+ 
+No subscriptions:
+ 
+“Make laundry automatic.”
+ 
+CTA:
+ 
+Explore plans
+ 
+No complaints:
+ 
+“Everything looks good.”
+ 
+ 
+34. ERROR STATES
+ 
+Errors must be human-readable.
+ 
+Bad:
+ 
+“HTTP 500”
+ 
+Good:
+ 
+“Something went wrong while confirming your pickup. Please try again.”
+ 
+Payment failure:
+ 
+“Your payment wasn’t completed. No order was confirmed.”
+ 
+Network issue:
+ 
+“You’re offline. We’ll reconnect automatically.”
+ 
+ 
+35. LOADING STATES
+ 
+Use skeleton loaders.
+ 
+Do not freeze the interface.
+ 
+After actions such as:
+ 
+Confirm Pickup Payment Cancel Order Approve Price
+ 
+show clear progress.
+ 
+ 
+36. ACCESSIBILITY
+ 
+Support:
+ 
+readable typography
+ 
+adequate contrast
+ 
+large touch targets
+ 
+keyboard accessibility on desktop
+ 
+meaningful labels
+ 
+screen-reader-friendly structure
+ 
+no color-only status indication
+ 
+ 
+37. MOBILE UX
+ 
+Optimize for one-handed use.
+ 
+Primary CTA should be easy to reach.
+ 
+Bottom sheets should be used where appropriate.
+ 
+Avoid tiny buttons.
+ 
+Do not require horizontal scrolling.
+ 
+Booking should ideally take less than one minute for a returning user.
+ 
+ 
+38. TRUST ELEMENTS
+ 
+Throughout the UI, subtly communicate:
+ 
+verified laundry partners
+ 
+tracked bags
+ 
+transparent pricing
+ 
+secure payments
+ 
+expected delivery
+ 
+support available
+ 
+Do not overuse badges.
+ 
+Trust should come from the workflow itself.
+ 
+ 
+39. LOCALIZATION
+ 
+Initially support:
+ 
+English
+ 
+Architect the UI so Malayalam can be added later.
+ 
+Do not hard-code strings directly into components.
+ 
+Use a translation structure.
+ 
+ 
+40. DATA-DRIVEN UI
+ 
+Prices, services, slots, subscription plans, zones, offers and statuses should be treated as backend data.
+ 
+Do NOT hard-code business data into the UI.
+ 
+Use realistic mock data during frontend development.
+ 
+Structure API integration so mock data can later be replaced with real APIs without rewriting components.
+ 
+ 
+41. IMPORTANT PRODUCT RULE
+ 
+The customer should NEVER see internal operational complexity unless necessary.
+ 
+Internally:
+ 
+Partner Driver Bag SLA Processing Settlement Capacity
+ 
+Externally:
+ 
+Your clothes are being cleaned.
+ 
+Your clothes are ready.
+ 
+Your driver is on the way.
+ 
+Your order will arrive tomorrow.
+ 
+Keep the customer experience simple.
+ 
+ 
+42. BUILD ORDER
+ 
+First create:
+ 
+Design system
+ 
+Customer Home
+ 
+Booking flow
+ 
+Price summary
+ 
+Order tracking
+ 
+Order details
+ 
+Order history
+ 
+Subscription
+ 
+Profile
+ 
+Driver app
+ 
+Partner dashboard
+ 
+Admin dashboard
+ 
+Make every screen visually consistent.
+ 
+ 
+43. IMPORTANT
+ 
+Do NOT create a generic laundry template.
+ 
+Do NOT create a clone of an existing laundry app.
+ 
+Build around our differentiators:
+ 
+1. Hyperlocal Kakkanad model
+ 
+2. Apartment collection
+ 
+3. Local laundry partners
+ 
+4. QR-based bag tracking
+ 
+5. Transparent estimated → final pricing
+ 
+6. Full order visibility
+ 
+7. Recurring laundry
+ 
+8. Strong complaint/claim workflow
+ 
+9. Operational SLA visibility
+ 
+10. Extremely simple customer UX
+ 
+The final product should feel like a professional consumer technology platform, not a local laundry shop website.
+ 
+Before implementing individual screens, establish the design system and reusable components so the entire application feels like one coherent product.

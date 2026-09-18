@@ -1,0 +1,24 @@
+kind = "mobile"
+previewPath = "/"
+title = "Washy Washy"
+description = "A mobile-first hyperlocal laundry pickup and delivery app for Kakkanad, Kochi, with transparent pricing, simple booking, apartment collection, bag tracking, and clear order visibility."
+version = "1.0.0"
+id = "artifacts/washy-washy-mobile"
+router = "expo-domain"
+
+[[services]]
+name = "expo"
+ensurePreviewReachable = "/status"
+paths = [ "/" ]
+localPort = 22152
+
+[services.development]
+run = "pnpm --filter @workspace/washy-washy-mobile run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/washy-washy-mobile", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/washy-washy-mobile", "run", "serve" ]
+
+[services.env]
+PORT = "22152"
+BASE_PATH = "/"
